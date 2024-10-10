@@ -5,45 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="10dp"
-    tools:context=".LoginActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@android:color/holo_red_dark"
-        android:text="欢迎进入 DIY" />
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:inputType="textPersonName"
-        android:hint="用户名" />
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:hint="密码"
-        android:inputType="textPassword" />
+    android:padding="20dp"
+    android:background = "@drawable/background_login"
+    tools:context=".LoginActivity" >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/loginBt"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="30dp"
+        android:background="@drawable/background_login_div">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="登录" />
-        <Button
-            android:id="@+id/registerBt"
-            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="25sp"
+            android:text="欢迎选择 DIY" />
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:singleLine="true"
+            android:background="@drawable/edit_login"
+            android:hint="用户名" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:singleLine="true"
+            android:background="@drawable/edit_login"
+            android:hint="密码"
+            android:inputType="textPassword" />
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="注册" />
+            android:gravity="center"
+            android:layout_marginTop="18dp">
+            <Button
+                android:id="@+id/loginBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="登录"
+                android:textColor="@drawable/text_btn_selector"
+                android:background="@drawable/background_button_div"/>
+            <Button
+                android:id="@+id/registerBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="注册"
+                android:textColor="@drawable/text_btn_selector"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_button_div"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
