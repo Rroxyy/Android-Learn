@@ -1,82 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:layout_margin="15dp"
     android:orientation="vertical"
+    app:layout_constrainedWidth="false"
     tools:context=".RegisterActivity">
 
+
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="注册"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/reg_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="请输入注册信息"
-        android:textColor="@android:color/holo_red_dark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="用户名"
+
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/reg_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:ems="10"
+        android:hint="密码"
+
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/cfg_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:ems="10"
+        android:hint="重复密码"
+
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:text="性别"
         android:textSize="20sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:text="用户名：" />
-
-        <EditText
-            android:id="@+id/reg_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="textPersonName"
-            android:text="" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="260dp"
+        android:text="学历"
+        android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:text="密 码：" />
-
-        <EditText
-            android:id="@+id/reg_pwd"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="textPassword" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:text="爱好"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="220dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="80dp"
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="重复密码：" />
+            android:text="男" />
 
-        <EditText
-            android:id="@+id/cfg_pwd"
-            android:layout_width="0dp"
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="textPassword" />
-    </LinearLayout>
+            android:layout_marginLeft="10dp"
+            android:text="女" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/edu_spinner"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="260dp"
+        android:entries="@array/education_options"
+        android:prompt="@string/academic_prompt"
+        android:spinnerMode="dropdown" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="300dp"
+        android:text="唱歌" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="300dp"
+        android:text="跳舞" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="300dp"
+        android:text="rap" />
 
     <Button
         android:id="@+id/reg_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/checkBox4"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="注册" />
-</LinearLayout>
+        android:text="注册"
+        tools:layout_marginTop="30dp" />
+
+
+</RelativeLayout>

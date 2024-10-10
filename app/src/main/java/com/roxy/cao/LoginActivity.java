@@ -65,24 +65,27 @@ public class LoginActivity extends AppCompatActivity {
         registerBt.setOnClickListener(v -> {
             // 点击注册按钮后，跳转到注册页面
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-            startActivityForResult(intent, 1);  // 使用 startActivityForResult 启动注册活动，并等待返回数据
+//            startActivityForResult(intent, 1);  // 使用 startActivityForResult 启动注册活动，并等待返回数据
+
+            startActivity(intent);
         });
+
     }
 
-    // 当 RegisterActivity 返回数据时，处理返回的注册信息
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        // 检查请求码是否为 1，即检查返回的数据是否来自注册页面
-        if (requestCode == 1) {
-            // 检查注册页面返回的结果是否成功
-            if (resultCode == RESULT_OK) {
-                // 更新保存的用户名和密码为用户注册时输入的值
-                userName = data.getStringExtra("regName");
-                pw_msg = data.getStringExtra("regPwd");
-            }
-        }
-    }
+//    // 当 RegisterActivity 返回数据时，处理返回的注册信息
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        // 检查请求码是否为 1，即检查返回的数据是否来自注册页面
+//        if (requestCode == 1) {
+//            // 检查注册页面返回的结果是否成功
+//            if (resultCode == RESULT_OK) {
+//                // 更新保存的用户名和密码为用户注册时输入的值
+//                userName = data.getStringExtra("regName");
+//                pw_msg = data.getStringExtra("regPwd");
+//            }
+//        }
+//    }
 
 
 
@@ -115,27 +118,27 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d("ActivityOut1234", "onRestart");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d("ActivityOut1234", "onPause");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i("ActivityOut1234", "onStop");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d("ActivityOut1234", "onDestroy");
-    }
+//    @Override
+//    protected void onRestart() {
+//        super.onRestart();
+//        Log.d("ActivityOut1234", "onRestart");
+//    }
+//
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        Log.d("ActivityOut1234", "onPause");
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        Log.i("ActivityOut1234", "onStop");
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        Log.d("ActivityOut1234", "onDestroy");
+//    }
 }
